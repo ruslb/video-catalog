@@ -20,7 +20,7 @@ function App() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News test commit
+            News 
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
