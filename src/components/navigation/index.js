@@ -4,13 +4,11 @@ import {
 	Box,
 	AppBar, 
 	Toolbar, 
-	Button,
 	IconButton,
    Typography, 
-	CssBaseline,
 	List,
 	ListItem,
-   Divider,
+   Button,
 	ListItemText,
 	Hidden,
 	ListItemButton,
@@ -40,7 +38,7 @@ const list = () => (
 	</Box>
  );	
   return (
-	<Box>
+	<Box sx={{flexGrow:1}}>
       <AppBar position="static">
         <Toolbar>
 			<Hidden only={['lg', 'xl']}>
@@ -58,7 +56,16 @@ const list = () => (
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Movies recommendation
           </Typography>
-
+		    <Box sx={{  display: { xs: 'none', lg: 'flex' } }}>
+         
+              <Button
+              
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+              Settings
+              </Button>
+           
+          </Box>
         </Toolbar>
       </AppBar>
 		<Drawer
