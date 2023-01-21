@@ -15,9 +15,8 @@ import {
 	ListItemIcon
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import MailIcon from '@mui/icons-material/Mail';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import SettingsIcon from '@mui/icons-material/Settings';
+import {Link} from "react-router-dom";
 
 
 const Navigation = () =>  {
@@ -27,14 +26,17 @@ const list = () => (
 	  sx={{ width:  250 }}
 	  role="presentation"
 	>
-	  <List>
+		<List>
+		<Link to="settings">
+	  
 			<ListItem >
 				 <ListItemIcon>
 					 <SettingsIcon />
 				 </ListItemIcon>
 				 <ListItemText primary="Settings" />
 			</ListItem>
-	  </List>		
+	  </Link>		
+	  </List>
 	</Box>
  );	
   return (
@@ -53,18 +55,21 @@ const list = () => (
             <MenuIcon />
           </IconButton>
 			 </Hidden>
+			
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+			 <Link to='/'>
             Movies recommendation
+				</Link>
           </Typography>
+			
 		    <Box sx={{  display: { xs: 'none', lg: 'flex' } }}>
-         
+         <Link to="settings">
               <Button
-              
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
               Settings
               </Button>
-           
+		   </Link>
           </Box>
         </Toolbar>
       </AppBar>
