@@ -18,8 +18,7 @@ function App() {
 	<CssBaseline />
 	<Navigation />
 	<Box sx={{
-		backgroundColor: (theme) =>theme.palette.grey(100)
-	}}>
+		backgroundColor: (theme) => theme.palette.grey[100]	}}>	
 	<Container maxWidth="xl">
 	<Routes>
 		<Route path="/" element={<Home />}/>
