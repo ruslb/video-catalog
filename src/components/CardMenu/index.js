@@ -1,10 +1,9 @@
 import React from 'react';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import IconButton from '@mui/material/IconButton';
 
-const CardMenu = ({ onAddClick }) => {
+const CardMenu = ({ onCardSelect, children }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -42,9 +41,7 @@ const CardMenu = ({ onAddClick }) => {
                     },
                 }}
             >
-                <MenuItem onClick={onAddClick}>
-                    Add
-                </MenuItem>
+                {children}
             </Menu>
         </>
     )
