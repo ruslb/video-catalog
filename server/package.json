@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "apollo-server": "^3.7.0",
+	 "date-fns": "^2.28.0",
     "graphql": "^16.4.0"
   }
 }
