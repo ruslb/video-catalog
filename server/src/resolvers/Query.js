@@ -1,17 +1,7 @@
-function movies(parent, args) {
-    return {
-        page: 1,
-        totalResults: 10,
-        totalPage: 10,
-        results: [{
-            id: 1,
-            title: 'Movie title',
-            releaseDate: 'release date',
-            posterPath: ''
-        }]
-    }
-}
+const { getPopular } = require('../modules/movies');
 
-module.exports = {
-    movies,
-}
+async function movies(parent, args) {
+
+    const data = await getPopular();
+
+    return data;
